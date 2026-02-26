@@ -4,7 +4,8 @@
 
 This repository contains a one-shot bootstrap script that converts a fresh Fedora Everything Minimal install into a complete KDE Plasma desktop with the CachyOS Kernel. gaming, multimedia, Flatpak, virtualization, and development tooling.
 
-Run it once from TTY. Reboot. Done.
+Install Fedora Everything and select minimal install.
+Run script once from TTY. Reboot. Done.
 
 ---
 

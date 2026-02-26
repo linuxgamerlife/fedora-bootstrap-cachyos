@@ -204,13 +204,16 @@ info "Virtualization setup complete (reboot required for group changes)"
 # Install the cachyos kernel
 #-----------------------------
 info "Installing CachyOS Kernel Repo"
-sudo dnf copr enable bieszczaders/kernel-cachyos
+dnf copr enable bieszczaders/kernel-cachyos
 
 info "Installing CachyOS Kernel"
-sudo dnf install kernel-cachyos kernel-cachyos-devel-matched
+dnf install kernel-cachyos kernel-cachyos-devel-matched
 
 info "Setting SELinux Policy for modules"
-sudo setsebool -P domain_kernel_load_modules on
+setsebool -P domain_kernel_load_modules on
+
+info "Installing cli interface for scx_loader"
+dnf install scxctl
 
 # -----------------------------
 # Boot and system tweaks

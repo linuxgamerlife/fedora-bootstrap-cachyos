@@ -17,8 +17,11 @@ set -euo pipefail
 # Tweaks:
 # - Disables NetworkManager-wait-online for faster boot
 #
+# Kernel:
+# - Installs the CachyOS Kernel & cli interface for scx_scheduler
+#
 # Run:
-#   curl -fsSL https://tinyurl.com/lgl-fedora | sudo bash
+#   curl -fsSL https://tinyurl.com/lgl-fedora-cachyos | sudo bash
 
 # -----------------------------
 # Colours (LGL style)

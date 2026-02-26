@@ -2,7 +2,9 @@
 
 # Linux Gamer Life Fedora KDE Bootstrap with CachyOS Kernel (TTY Friendly)
 
-This repository contains a one-shot bootstrap script that converts a fresh Fedora Everything Minimal install into a complete KDE Plasma desktop with the CachyOS Kernel. gaming, multimedia, Flatpak, virtualization, and development tooling.
+# AMD Only at the moment
+
+This repository contains a one-shot bootstrap script that converts a fresh Fedora Everything Minimal install into a complete KDE Plasma desktop with the CachyOS Kernel. Includes gaming, multimedia, Flatpak, virtualization, and development tooling.
 
 Install Fedora Everything and select minimal install.
 Run script once from TTY. Reboot. Done.

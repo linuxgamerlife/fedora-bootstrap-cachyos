@@ -102,34 +102,6 @@ Run from TTY
 
 ---
 
-# Full Script
-
-```bash
-#!/usr/bin/env bash
-set -euo pipefail
-
-# Linux Gamer Life Fedora Bootstrap (TTY friendly)
-# Goal: Start from Fedora Everything Minimal (TTY), run once, reboot into KDE Plasma.
-
-# Script contents here...
-```
-
----
-
-# After installation
-
-Reboot the system:
-
-```bash
-reboot
-```
-
-KDE Plasma will start automatically.
-
----
-
 # Notes
 
-This script enables RPM Fusion and installs multimedia codecs. Ensure this complies with your local licensing requirements.
-
-This script is provided as-is and reflects the Linux Gamer Life workflow.
+This script is provided as-is and Linux Gamer Life accepts no risk if you break your system using it.

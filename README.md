@@ -23,6 +23,8 @@ curl -fsSL https://tinyurl.com/lgl-fedora-cachyos | sudo bash
 Or run locally:
 
 ```bash
+sudo dnf install wget
+wget https://tinyurl.com/lgl-fedora-cachyos
 chmod +x lgl-fedora-bootstrap.sh
 sudo ./lgl-fedora-bootstrap.sh
 ```

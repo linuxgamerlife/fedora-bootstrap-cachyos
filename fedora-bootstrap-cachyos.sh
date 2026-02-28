@@ -216,7 +216,7 @@ info "Setting SELinux Policy for modules"
 setsebool -P domain_kernel_load_modules on
 
 info "Installing cli interface for scx_loader"
-dnf install scxctl
+#dnf install scxctl
 
 # -----------------------------
 # Boot and system tweaks

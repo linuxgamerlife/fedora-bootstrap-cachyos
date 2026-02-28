@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Linux Gamer Life Fedora Bootstrap (TTY friendly)
+# Linux Gamer Life Fedora Bootstrap with CachyOS Kernel (TTY friendly)
 # Goal: Start from Fedora Everything Minimal (TTY), run once, reboot into KDE Plasma.
 #
 # Installs and configures:
@@ -18,7 +18,7 @@ set -euo pipefail
 # - Disables NetworkManager-wait-online for faster boot
 #
 # Kernel:
-# - Installs the CachyOS Kernel & cli interface for scx_scheduler
+# - Installs the CachyOS Kernel, CachyOS Addons & cli interface for scx_scheduler
 #
 # Run:
 #   curl -fsSL https://tinyurl.com/lgl-fedora-cachyos | sudo bash
@@ -77,7 +77,7 @@ dnf -y upgrade --refresh
 dnf -y install curl wget git dnf-plugins-core
 
 # -----------------------------
-# Repositories
+# Enable RPM Fusion &
 # -----------------------------
 section "Enable RPM Fusion (free and nonfree)"
 dnf -y install \
@@ -87,7 +87,7 @@ dnf -y upgrade --refresh
 
 section "Enable Cisco OpenH264 repo"
 dnf config-manager --set-enabled fedora-cisco-openh264 || true
-dnf -y upgrade --refresh
+#dnf -y upgrade --refresh
 
 # -----------------------------
 # Desktop environment
@@ -142,7 +142,7 @@ dnf -y install ffmpeg-libs libva libva-utils
 # 8) AMD stack (Fedora defaults + extras)
 # -----------------------------
 section "AMD Mesa and Vulkan stack"
-dnf -y install \
+dnf install \
   mesa-dri-drivers \
   mesa-vulkan-drivers \
   vulkan-loader \
@@ -206,8 +206,9 @@ info "Virtualization setup complete (reboot required for group changes)"
 #-----------------------------
 # Install the cachyos kernel
 #-----------------------------
-info "Installing CachyOS Kernel Repo"
+info "Installing CachyOS Kernel Repos including addons"
 dnf copr enable bieszczaders/kernel-cachyos
+dnf copr enable bieszczaders/kernel-cachyos-addons
 
 info "Installing CachyOS Kernel"
 dnf install kernel-cachyos kernel-cachyos-devel-matched
@@ -215,8 +216,12 @@ dnf install kernel-cachyos kernel-cachyos-devel-matched
 info "Setting SELinux Policy for modules"
 setsebool -P domain_kernel_load_modules on
 
-info "Installing cli interface for scx_loader"
-#dnf install scxctl
+info "Installing scx tools, cli interface for scx_loader"
+dnf install \
+scx-scheds \
+scx-manager \
+scx-tools \
+scxctl
 
 # -----------------------------
 # Boot and system tweaks

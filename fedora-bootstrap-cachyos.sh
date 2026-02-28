@@ -21,7 +21,16 @@ set -euo pipefail
 # - Installs the CachyOS Kernel, CachyOS Addons & cli interface for scx_scheduler
 #
 # Run:
-#   curl -fsSL https://tinyurl.com/lgl-fedora-cachyos | sudo bash
+#  curl -fsSL https://tinyurl.com/lgl-fedora-cachyos | sudo bash
+#
+# or download locally:
+#  sudo dnf install wget
+#  wget https://tinyurl.com/lgl-fedora-cachyos
+#   chmod +x lgl-fedora-cachyos
+#   sudo ./lgl-fedora-cachyos
+#
+#
+#
 
 # -----------------------------
 # Colours (LGL style)

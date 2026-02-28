@@ -3,6 +3,7 @@
 # Linux Gamer Life Fedora KDE Bootstrap with CachyOS Kernel and Addons (TTY Friendly)
 
 # AMD Only at the moment - Select no at AMD section if not on AMD [UNTESTED]
+# DISABLE SECURE BOOT IN THE BIOS!!!!!! OR ELSE!!! THE WORLD WILL END!!!
 
 This repository contains a one-shot bootstrap script that converts a fresh Fedora Everything Minimal install into a complete KDE Plasma desktop with the CachyOS Kernel and kernel addons. Includes gaming, multimedia, Flatpak, virtualization, and development tooling.
 

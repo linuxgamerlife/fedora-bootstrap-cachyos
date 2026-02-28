@@ -1,10 +1,10 @@
 **TESTED IN A VM***
 
-# Linux Gamer Life Fedora KDE Bootstrap with CachyOS Kernel (TTY Friendly)
+# Linux Gamer Life Fedora KDE Bootstrap with CachyOS Kernel and Addons (TTY Friendly)
 
-# AMD Only at the moment
+# AMD Only at the moment - Select no at AMD section if not on AMD [UNTESTED]
 
-This repository contains a one-shot bootstrap script that converts a fresh Fedora Everything Minimal install into a complete KDE Plasma desktop with the CachyOS Kernel. Includes gaming, multimedia, Flatpak, virtualization, and development tooling.
+This repository contains a one-shot bootstrap script that converts a fresh Fedora Everything Minimal install into a complete KDE Plasma desktop with the CachyOS Kernel and kernel addons. Includes gaming, multimedia, Flatpak, virtualization, and development tooling.
 
 Install Fedora Everything and select minimal install.
 Run script once from TTY. Reboot. Done.
@@ -80,7 +80,8 @@ OVMF
 swtpm  
 
 Kernel  
-CachyOS kernel  
+CachyOS kernel
+CachyOS Addons
 scxctl scheduler interface  
 
 System tweaks  

@@ -179,7 +179,7 @@ info "Heroic Games Launcher"
 flatpak install -y flathub com.heroicgameslauncher.hgl || true
 
 info "Libre Office"
-flatpak install org.libreoffice.LibreOffice
+flatpak install -y org.libreoffice.LibreOffice || true
 
 # -----------------------------
 # Gaming tools

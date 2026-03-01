@@ -14,13 +14,7 @@ Run script once from TTY. Reboot. Done.
 
 # Quick Start
 
-Run directly from remote source:
-
-```bash
-curl -fsSL https://tinyurl.com/lgl-fedora-cachyos | sudo bash
-```
-
-Or run locally:
+Download and run scipt locally:
 
 ```bash
 sudo dnf install wget

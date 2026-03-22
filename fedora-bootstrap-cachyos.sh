@@ -13,6 +13,7 @@ set -euo pipefail
 # - Flatpak + Flathub + Flatseal
 # - Virtualization: virt-manager + libvirt/KVM stack
 # - Fedora Media Writer (extra)
+# - Controller support
 #
 # Tweaks:
 # - Disables NetworkManager-wait-online for faster boot
@@ -184,7 +185,7 @@ flatpak install -y flathub org.libreoffice.LibreOffice || true
 # -----------------------------
 section "Gaming tools"
 dnf -y install steam obs-studio lutris mangohud || true
-
+dnf -y install kernel-modules-extra
 # -----------------------------
 # Virtualization (virt-manager and KVM)
 # -----------------------------
